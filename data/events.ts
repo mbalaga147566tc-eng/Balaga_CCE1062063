@@ -1,0 +1,9 @@
+export type Event = { id: string; title: string; category: 'Academic' | 'Sports' | 'Cultural' | 'Workshop' | 'Social'; date: string; time: string; venue: string; description: string; joined: boolean };
+export const events: Event[] = [
+  { id: '1', title: 'Campus Tech Summit', category: 'Academic', date: 'September 20, 2026', time: '9:00 AM – 3:00 PM', venue: 'University Auditorium', description: 'Meet student innovators and faculty speakers as they share practical ideas shaping tomorrow’s campus.', joined: false },
+  { id: '2', title: 'Intramural Basketball Finals', category: 'Sports', date: 'September 23, 2026', time: '4:00 PM – 6:00 PM', venue: 'Campus Gymnasium', description: 'Cheer for the finalists in a lively afternoon of campus basketball and school spirit.', joined: false },
+  { id: '3', title: 'Heritage Night', category: 'Cultural', date: 'September 25, 2026', time: '5:30 PM – 8:30 PM', venue: 'Student Plaza', description: 'An evening of music, food, and performances celebrating the many cultures in our community.', joined: false },
+  { id: '4', title: 'Resume Design Lab', category: 'Workshop', date: 'September 28, 2026', time: '1:00 PM – 3:00 PM', venue: 'Learning Commons 2F', description: 'Bring your draft resume and get focused feedback from career mentors and peer volunteers.', joined: false },
+  { id: '5', title: 'Freshers’ Picnic', category: 'Social', date: 'October 2, 2026', time: '11:00 AM – 2:00 PM', venue: 'North Lawn', description: 'Make new friends over games, lunch, and low-key outdoor activities for the whole campus.', joined: false },
+  { id: '6', title: 'Research Poster Showcase', category: 'Academic', date: 'October 6, 2026', time: '10:00 AM – 1:00 PM', venue: 'Science Hall Atrium', description: 'Browse student research projects and ask presenters about their methods and discoveries.', joined: false },
+];
