@@ -14,6 +14,11 @@ export default function Events() {
 
   return (
     <View style={styles.container}>
+      <View style={styles.header}>
+        <Text style={styles.eyebrow}>CAMPUS CALENDAR</Text>
+        <Text style={styles.title}>Find your next event</Text>
+        <Text style={styles.subtitle}>{filteredEvents.length} events ready for you to explore</Text>
+      </View>
       <View style={styles.filterContainer}>
         {CATEGORIES.map(cat => (
           <Pressable 
@@ -37,6 +42,7 @@ export default function Events() {
           />
         )}
         contentContainerStyle={styles.listContent}
+        showsVerticalScrollIndicator={false}
       />
     </View>
   );
@@ -45,33 +51,62 @@ export default function Events() {
 const styles = StyleSheet.create({
   container: {
     flex: 1,
-    backgroundColor: '#f8f9fa',
+    backgroundColor: '#F6F8FA',
+  },
+  header: {
+    backgroundColor: '#0F2F3A',
+    paddingHorizontal: 20,
+    paddingTop: 28,
+    paddingBottom: 24,
+    borderBottomLeftRadius: 28,
+    borderBottomRightRadius: 28,
+  },
+  eyebrow: {
+    color: '#7DD3C7',
+    fontSize: 11,
+    fontWeight: '800',
+    letterSpacing: 1.2,
+    marginBottom: 8,
+  },
+  title: {
+    color: '#FFFFFF',
+    fontSize: 27,
+    fontWeight: '800',
+    letterSpacing: -0.7,
+  },
+  subtitle: {
+    color: '#D9E8E8',
+    fontSize: 14,
+    marginTop: 8,
   },
   filterContainer: {
     flexDirection: 'row',
-    padding: 16,
+    paddingHorizontal: 20,
+    paddingVertical: 18,
     flexWrap: 'wrap',
     gap: 8,
   },
   filterButton: {
-    paddingHorizontal: 16,
-    paddingVertical: 8,
+    paddingHorizontal: 14,
+    paddingVertical: 9,
     borderRadius: 20,
-    backgroundColor: '#e9ecef',
+    backgroundColor: '#E8EEF2',
   },
   filterActive: {
-    backgroundColor: '#0056b3',
+    backgroundColor: '#0F766E',
   },
   filterText: {
-    color: '#495057',
-    fontSize: 14,
+    color: '#52606D',
+    fontSize: 13,
+    fontWeight: '700',
   },
   filterTextActive: {
     color: '#fff',
-    fontWeight: 'bold',
+    fontWeight: '800',
   },
   listContent: {
-    padding: 16,
+    paddingHorizontal: 20,
+    paddingBottom: 28,
     paddingTop: 0,
   }
 });

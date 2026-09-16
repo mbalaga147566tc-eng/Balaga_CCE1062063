@@ -25,6 +25,7 @@ export default function EventDetails() {
   return (
     <ScrollView contentContainerStyle={styles.container}>
       <View style={styles.card}>
+        <Text style={styles.eyebrow}>EVENT DETAILS</Text>
         <Text style={styles.title}>{event.title}</Text>
         <Text style={styles.category}>{event.category}</Text>
         
@@ -61,8 +62,9 @@ export default function EventDetails() {
 const styles = StyleSheet.create({
   container: {
     flexGrow: 1,
-    padding: 16,
-    backgroundColor: '#f8f9fa',
+    padding: 20,
+    paddingTop: 28,
+    backgroundColor: '#F6F8FA',
   },
   centered: {
     flex: 1,
@@ -72,61 +74,65 @@ const styles = StyleSheet.create({
   },
   card: {
     backgroundColor: '#fff',
-    padding: 24,
-    borderRadius: 12,
-    shadowColor: '#000',
-    shadowOpacity: 0.1,
-    shadowRadius: 8,
+    padding: 22,
+    borderRadius: 24,
+    borderWidth: 1,
+    borderColor: '#E8EEF2',
+    shadowColor: '#0F172A',
+    shadowOpacity: 0.06,
+    shadowRadius: 12,
+    shadowOffset: { width: 0, height: 5 },
     elevation: 3,
   },
+  eyebrow: { color: '#0F766E', fontSize: 11, fontWeight: '800', letterSpacing: 1.2, marginBottom: 10 },
   title: {
-    fontSize: 24,
-    fontWeight: 'bold',
-    color: '#333',
-    marginBottom: 8,
+    fontSize: 27,
+    fontWeight: '800',
+    color: '#0F172A',
+    marginBottom: 10,
+    letterSpacing: -0.5,
   },
   category: {
     fontSize: 16,
-    color: '#0056b3',
-    fontWeight: '600',
-    marginBottom: 24,
+    color: '#0F766E',
+    fontWeight: '800',
+    marginBottom: 26,
   },
   infoRow: {
     flexDirection: 'row',
     marginBottom: 12,
   },
   infoLabel: {
-    fontWeight: 'bold',
+    fontWeight: '800',
     width: 100,
-    color: '#555',
+    color: '#334155',
   },
   infoValue: {
     flex: 1,
     color: '#333',
   },
-  descriptionLabel: { fontSize: 15, fontWeight: 'bold', color: '#334155', marginTop: 10, marginBottom: 7 },
-  description: { color: '#475569', fontSize: 15, lineHeight: 22 },
+  descriptionLabel: { fontSize: 16, fontWeight: '800', color: '#0F172A', marginTop: 14, marginBottom: 8 },
+  description: { color: '#475569', fontSize: 15, lineHeight: 23 },
   statusContainer: {
     marginTop: 24,
     marginBottom: 24,
-    padding: 12,
-    backgroundColor: '#f1f5f9',
-    borderRadius: 6,
+    padding: 14,
+    backgroundColor: '#ECFDF5',
+    borderRadius: 14,
   },
   statusText: {
     fontSize: 14,
-    fontStyle: 'italic',
-    color: '#475569',
+    color: '#047857',
     textAlign: 'center',
   },
   actionButton: {
-    padding: 16,
-    borderRadius: 8,
+    padding: 17,
+    borderRadius: 14,
     alignItems: 'center',
   },
   pressed: { opacity: 0.75 },
   joinButton: {
-    backgroundColor: '#198754',
+    backgroundColor: '#0F766E',
   },
   leaveButton: {
     backgroundColor: '#dc3545',

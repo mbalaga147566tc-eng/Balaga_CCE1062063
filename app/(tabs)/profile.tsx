@@ -35,9 +35,12 @@ export default function Profile() {
       <View style={styles.avatarContainer}>
         <View style={styles.avatar}><Text style={styles.avatarText}>{userProfile.name.charAt(0).toUpperCase()}</Text></View>
         <Text style={styles.currentName}>{userProfile.name}</Text>
+        <Text style={styles.profileHint}>Manage your Event Mate profile</Text>
       </View>
 
       <View style={styles.form}>
+        <Text style={styles.formTitle}>Personal details</Text>
+        <Text style={styles.formCopy}>Keep your information up to date for a smoother event experience.</Text>
         <Text style={styles.label}>Full Name</Text>
         <TextInput 
           style={styles.input}
@@ -73,50 +76,58 @@ export default function Profile() {
 
 const styles = StyleSheet.create({
   container: {
-    padding: 16,
+    padding: 20,
+    paddingTop: 30,
     flexGrow: 1,
-    backgroundColor: '#f8f9fa',
+    backgroundColor: '#F6F8FA',
   },
   avatarContainer: {
     alignItems: 'center',
-    marginVertical: 24,
+    marginBottom: 28,
   },
   avatar: {
-    width: 100,
-    height: 100,
-    borderRadius: 50,
+    width: 94,
+    height: 94,
+    borderRadius: 47,
     marginBottom: 12,
-    backgroundColor: '#2563eb',
+    backgroundColor: '#0F766E',
     alignItems: 'center',
     justifyContent: 'center',
   },
   avatarText: { color: '#fff', fontSize: 38, fontWeight: '800' },
   currentName: {
-    fontSize: 20,
-    fontWeight: 'bold',
-    color: '#333',
+    fontSize: 22,
+    fontWeight: '800',
+    color: '#0F172A',
   },
+  profileHint: { color: '#64748B', fontSize: 14, marginTop: 6 },
   form: {
-    backgroundColor: '#fff',
-    padding: 16,
-    borderRadius: 8,
-    shadowColor: '#000',
-    shadowOpacity: 0.05,
-    shadowRadius: 5,
+    backgroundColor: '#FFFFFF',
+    padding: 20,
+    borderRadius: 22,
+    borderWidth: 1,
+    borderColor: '#E8EEF2',
+    shadowColor: '#0F172A',
+    shadowOpacity: 0.06,
+    shadowRadius: 12,
     elevation: 2,
   },
+  formTitle: { color: '#0F172A', fontSize: 19, fontWeight: '800', marginBottom: 5 },
+  formCopy: { color: '#64748B', fontSize: 13, lineHeight: 19, marginBottom: 22 },
   label: {
     fontSize: 14,
     fontWeight: '600',
-    color: '#444',
+    color: '#334155',
     marginBottom: 8,
   },
   input: {
     borderWidth: 1,
-    borderColor: '#ccc',
-    borderRadius: 6,
-    padding: 12,
+    borderColor: '#D8E1E8',
+    borderRadius: 13,
+    padding: 14,
     fontSize: 16,
+    color: '#0F172A',
+    backgroundColor: '#FAFCFD',
     marginBottom: 16,
   },
   errorText: {
@@ -131,9 +142,9 @@ const styles = StyleSheet.create({
     fontWeight: 'bold',
   },
   saveButton: {
-    backgroundColor: '#0056b3',
-    padding: 14,
-    borderRadius: 6,
+    backgroundColor: '#0F766E',
+    padding: 16,
+    borderRadius: 14,
     alignItems: 'center',
   },
   saveButtonPressed: {
