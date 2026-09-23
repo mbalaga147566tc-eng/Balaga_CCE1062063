@@ -1,0 +1,13 @@
+{
+  "expo": {
+    "name": "Authenticated Student Portal",
+    "slug": "authenticated-student-portal",
+    "version": "1.0.0",
+    "orientation": "portrait",
+    "scheme": "studentportal",
+    "userInterfaceStyle": "light",
+    "newArchEnabled": true,
+    "plugins": ["expo-router", "expo-secure-store"],
+    "experiments": { "typedRoutes": false }
+  }
+}
