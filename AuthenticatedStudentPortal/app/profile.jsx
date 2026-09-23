@@ -1,6 +1,6 @@
 import { useEffect, useState } from 'react';
 import { Image, Pressable, ScrollView, StyleSheet, Text, TextInput, View } from 'react-native';
-import { Redirect, router } from 'expo-router';
+import { Redirect } from 'expo-router';
 import { SafeAreaView } from 'react-native-safe-area-context';
 import LoadingScreen from '../components/LoadingScreen';
 import { useAuth } from '../context/AuthContext';
@@ -80,7 +80,6 @@ export default function ProfileScreen() {
         </View>
         {!!sessionMessage && <Text style={styles.notice}>{sessionMessage}</Text>}
         {!isLocalDemo && <Pressable onPress={refreshProfile} disabled={refreshing} style={({ pressed }) => [styles.refreshButton, pressed && styles.pressed]}><Text style={styles.refreshText}>{refreshing ? 'Refreshing profile...' : 'Refresh profile'}</Text></Pressable>}
-        <Pressable accessibilityRole="button" onPress={() => router.push('/quotes')} style={({ pressed }) => [styles.quotesButton, pressed && styles.pressed]}><Text style={styles.quotesButtonText}>OPEN QUOTES APP</Text></Pressable>
         <Pressable accessibilityRole="button" onPress={signOut} style={({ pressed }) => [styles.logoutButton, pressed && styles.pressed]}><Text style={styles.logoutText}>LOG OUT</Text></Pressable>
         <Text style={styles.footer}>{isLocalDemo ? 'This is the local Mavy demo profile.' : 'Your profile is loaded from a protected account endpoint.'}</Text>
       </ScrollView>
@@ -102,6 +101,5 @@ const styles = StyleSheet.create({
   notice: { color: '#1769A7', backgroundColor: '#EAF4FF', padding: 13, borderRadius: 12, fontSize: 13, marginTop: 16, lineHeight: 19 },
   refreshButton: { minHeight: 48, alignItems: 'center', justifyContent: 'center', marginTop: 16, borderColor: '#C8D9F2', borderWidth: 1, borderRadius: 13, backgroundColor: '#FFFFFF' }, refreshText: { color: '#1769E0', fontWeight: '700', fontSize: 14 },
   logoutButton: { minHeight: 52, alignItems: 'center', justifyContent: 'center', marginTop: 12, backgroundColor: '#1769E0', borderRadius: 13 }, logoutText: { color: '#FFFFFF', fontSize: 13, letterSpacing: 1.1, fontWeight: '800' }, pressed: { opacity: 0.72 },
-  quotesButton: { minHeight: 48, alignItems: 'center', justifyContent: 'center', marginTop: 12, backgroundColor: '#FFFFFF', borderWidth: 1, borderColor: '#C8D9F2', borderRadius: 13 }, quotesButtonText: { color: '#1769E0', fontSize: 12, letterSpacing: 0.9, fontWeight: '800' },
   footer: { color: '#8A97A8', fontSize: 11, textAlign: 'center', marginTop: 17, lineHeight: 17 },
 });

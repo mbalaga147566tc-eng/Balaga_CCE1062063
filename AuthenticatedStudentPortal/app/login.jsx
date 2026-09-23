@@ -1,6 +1,5 @@
 import { useState } from 'react';
 import { ActivityIndicator, KeyboardAvoidingView, Platform, Pressable, ScrollView, StyleSheet, Text, TextInput, View } from 'react-native';
-import { router } from 'expo-router';
 import { SafeAreaView } from 'react-native-safe-area-context';
 import { useAuth } from '../context/AuthContext';
 
@@ -63,11 +62,6 @@ export default function LoginScreen() {
             <Text style={styles.demoLine}><Text style={styles.demoType}>Local</Text>  Mavy Balaga  ·  Mavypass</Text>
             <Text style={styles.demoLine}><Text style={styles.demoType}>API</Text>  emilys  ·  emilyspass</Text>
           </View>
-          <Pressable accessibilityRole="button" onPress={() => router.push('/quotes')} style={({ pressed }) => [styles.quotesButton, pressed && styles.quotesPressed]}>
-            <View style={styles.quoteIcon}><Text style={styles.quoteIconText}>“</Text></View>
-            <View style={styles.quotesCopy}><Text style={styles.quotesTitle}>Need a little inspiration?</Text><Text style={styles.quotesSubtitle}>Explore the Quotes App</Text></View>
-            <Text style={styles.quotesArrow}>→</Text>
-          </Pressable>
           <Text style={styles.footer}>A simple space for your student life.</Text>
         </ScrollView>
       </KeyboardAvoidingView>
@@ -93,6 +87,5 @@ const styles = StyleSheet.create({
   button: { minHeight: 53, borderRadius: 13, backgroundColor: '#1769E0', alignItems: 'center', justifyContent: 'center', flexDirection: 'row', marginTop: 22, shadowColor: '#1769E0', shadowOpacity: 0.16, shadowRadius: 10, shadowOffset: { width: 0, height: 4 }, elevation: 2 }, buttonDim: { opacity: 0.72 }, buttonText: { color: '#FFFFFF', fontSize: 12, letterSpacing: 0.9, fontWeight: '800' }, buttonArrow: { color: '#FFFFFF', fontSize: 18, marginLeft: 9, marginTop: -2 },
   error: { marginTop: 14, color: '#B42318', fontSize: 13, lineHeight: 19 }, notice: { marginTop: 14, color: '#1769A7', fontSize: 13, lineHeight: 19 },
   demoBox: { backgroundColor: '#E4EDF9', borderRadius: 14, paddingHorizontal: 15, paddingVertical: 12, marginTop: 17 }, demoHeading: { color: '#68809F', fontWeight: '900', fontSize: 9, letterSpacing: 1.1, marginBottom: 7 }, demoLine: { color: '#425B7B', fontSize: 11, lineHeight: 19 }, demoType: { color: '#1769E0', fontWeight: '900' },
-  quotesButton: { flexDirection: 'row', alignItems: 'center', backgroundColor: '#FFFFFF', borderRadius: 15, borderWidth: 1, borderColor: '#E4EBF4', padding: 12, marginTop: 12 }, quotesPressed: { opacity: 0.8 }, quoteIcon: { width: 38, height: 38, borderRadius: 12, alignItems: 'center', justifyContent: 'center', backgroundColor: '#EAF2FE' }, quoteIconText: { color: '#1769E0', fontSize: 28, fontWeight: '800', lineHeight: 34 }, quotesCopy: { flex: 1, marginLeft: 11 }, quotesTitle: { color: '#24364F', fontWeight: '800', fontSize: 11 }, quotesSubtitle: { color: '#1769E0', fontWeight: '700', fontSize: 11, marginTop: 3 }, quotesArrow: { color: '#1769E0', fontSize: 20, fontWeight: '700', marginHorizontal: 7 },
   footer: { color: '#9AA6B5', textAlign: 'center', marginTop: 20, fontSize: 10 },
 });
